@@ -1,0 +1,13 @@
+{
+  "extends": ["tslint-react"],
+  "rules": {
+    "member-access": false,
+    "interface-name": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts"
+    ]
+  }
+}
