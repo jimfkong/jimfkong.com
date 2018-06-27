@@ -1,8 +1,23 @@
+@import "../../../styles/abstract/_mixins";
+
 .home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    justify-items: center;
+    grid-column-gap: remcalc(8);
+    grid-row-gap: remcalc(8);
+    grid-template-columns: 25% 50% 25%;    
+    grid-template-rows: 40% 10% 10% 40%;
+    grid-template-areas: ". . ."". name ."". title ."". . .";
+    height: 100vh;
+    text-align: center;
+
+    &__name {
+        grid-area: name;
+        font-size: remcalc(36);
+        align-self: end;
+    }
     &__title {
-        
+        grid-area: title;
+        font-size: remcalc(24);
     }
 }

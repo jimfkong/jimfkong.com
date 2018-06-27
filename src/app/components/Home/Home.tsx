@@ -9,7 +9,7 @@ export class Home extends React.Component {
             <Blade>
                 <div className="home">
                     {/* TODO image */}
-                    <div>
+                    <div className="home__name">
                         Jim Kong
                     </div>
                     <div className="home__title">
