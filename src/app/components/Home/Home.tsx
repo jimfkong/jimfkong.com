@@ -1,22 +1,26 @@
 import * as React from 'react';
-import { Blade } from '../Blade';
+import { ContactLinks } from '../ContactLinks';
+import { Portrait } from '../Portrait';
 
-import './Home.css'
+import './Home.css';
 
 export class Home extends React.Component {
     render() {
         return (
-            <Blade>
-                <div className="home">
-                    {/* TODO image */}
-                    <div className="home__name">
-                        Jim Kong
-                    </div>
-                    <div className="home__title">
-                        Software Engineer
-                    </div>
+            <div className="home">
+                <div className="home__portrait">
+                    <Portrait />
                 </div>
-            </Blade>
-        )
+                <div className="home__name">
+                    Jim Kong
+                    </div>
+                <div className="home__title">
+                    <div>Software Engineer</div>
+                </div>
+                <div className="home__links">
+                    <ContactLinks />
+                </div>
+            </div>
+        );
     }
 }

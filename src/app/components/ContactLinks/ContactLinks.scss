@@ -1,0 +1,24 @@
+@import "../../../styles/abstract/_mixins";
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+
+    &__icon {
+        height: remcalc(32);
+        width: remcalc(32);
+        display: block;
+        margin: 0 remcalc(6);
+    }
+    &__git {
+        background-image: url("../../../assets/github-32px.png");
+    }
+    &__linkedin {
+        background-image: url("../../../assets/linked-in-32px.png");
+    }
+    &__email {
+        background-image: url("../../../assets/mail.svg");
+        background-repeat: no-repeat;
+        background-size: remcalc(32) remcalc(32);
+    }
+}

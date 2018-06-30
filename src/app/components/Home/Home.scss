@@ -4,12 +4,17 @@
     display: grid;
     justify-items: center;
     grid-column-gap: remcalc(8);
-    grid-row-gap: remcalc(8);
-    grid-template-columns: 25% 50% 25%;    
-    grid-template-rows: 40% 10% 10% 40%;
-    grid-template-areas: ". . ."". name ."". title ."". . .";
+    grid-row-gap: remcalc(16);
+    grid-template-columns: auto 75% auto;
+    grid-template-rows: auto remcalc(140) 5% 5% 5% auto;
+    grid-template-areas: ". . ."". portrait ."". name ."". title ."". links ."". . .";
     height: 100vh;
     text-align: center;
+
+    @media (min-width: 480px) {
+        grid-template-columns: auto 50% auto;
+        grid-row-gap: remcalc(8);
+    }
 
     &__name {
         grid-area: name;
@@ -19,5 +24,11 @@
     &__title {
         grid-area: title;
         font-size: remcalc(24);
+    }
+    &__links {
+        grid-area: links;
+    }
+    &__portrait {
+        grid-area: portrait;
     }
 }

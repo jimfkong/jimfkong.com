@@ -1,0 +1,9 @@
+@import "../../../styles/abstract/_mixins";
+
+.portrait {
+    &__me {
+        border-radius: 50%;
+        height: remcalc(140);
+        width: remcalc(140);
+    }
+}
