@@ -8,9 +8,10 @@ export class Portrait extends React.Component {
     render() {
         return (
             <div className="portrait">
-                <img 
+                <img
                     className="portrait__me" 
                     src={me}
+                    alt="Jim Kong"
                 />
             </div>
         );

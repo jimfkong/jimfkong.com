@@ -19,7 +19,8 @@
     &__name {
         grid-area: name;
         font-size: remcalc(36);
-        align-self: end;
+        align-self: center;
+        font-weight: normal;
     }
     &__title {
         grid-area: title;

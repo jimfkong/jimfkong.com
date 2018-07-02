@@ -9,16 +9,16 @@
         width: remcalc(32);
         display: block;
         margin: 0 remcalc(6);
+        background-repeat: no-repeat;
+        background-size: remcalc(32) remcalc(32);
     }
     &__git {
-        background-image: url("../../../assets/github-32px.png");
+        background-image: url("../../../assets/github.svg")
     }
     &__linkedin {
-        background-image: url("../../../assets/linked-in-32px.png");
+        background-image: url("../../../assets/linkedin.svg");
     }
     &__email {
         background-image: url("../../../assets/mail.svg");
-        background-repeat: no-repeat;
-        background-size: remcalc(32) remcalc(32);
     }
 }
