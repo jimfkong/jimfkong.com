@@ -1,26 +1,31 @@
-import * as React from 'react';
+import * as React from "react";
+import { ContactLink } from "src/app/models/ContactLink";
+import "./ContactLinks.css";
 
-import './ContactLinks.css';
+export interface ContactLinksProps {
+  Links: ContactLink[];
+}
 
-export class ContactLinks extends React.Component {
-    render() {
-        return (
-            <div className="contact-links">
-                <a 
-                    className="contact-links__icon contact-links__git"
-                    target="_blank" 
-                    href="https://github.com/jimfkong" 
-                />
-                <a 
-                    className="contact-links__icon contact-links__linkedin"
-                    target="_blank"
-                    href="https://www.linkedin.com/in/jim-kong/"
-                />
-                <a 
-                    className="contact-links__icon contact-links__email"
-                    href="mailto:jim.f.kong@gmail.com"
-                />
-            </div>
-        );
-    }
+export class ContactLinks extends React.Component<ContactLinksProps, any> {
+  render() {
+    const { Links } = this.props;
+
+    return <div className="contact-links">{this.generateUrlList(Links)}</div>;
+  }
+
+  private generateUrlList(links: ContactLink[]): any {
+    return (
+      <React.Fragment>
+        {links.map(link => this.generateUrl(link))}
+      </React.Fragment>
+    );
+  }
+
+  private generateUrl(link: ContactLink): any {
+    return (
+      <a target="_blank" href={link.Url} title={link.Name}>
+        <img className="contact-links__icon" src={link.Icon} />
+      </a>
+    );
+  }
 }
