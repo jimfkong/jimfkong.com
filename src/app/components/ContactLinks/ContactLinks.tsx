@@ -23,8 +23,8 @@ export class ContactLinks extends React.Component<ContactLinksProps, any> {
 
   private generateUrl(link: ContactLink): any {
     return (
-      <a target="_blank" href={link.Url} title={link.Name}>
-        <img className="contact-links__icon" src={link.Icon} />
+      <a target="_blank" href={link.Url}>
+        <img className="contact-links__icon" src={link.Icon} alt={link.Name} />
       </a>
     );
   }
